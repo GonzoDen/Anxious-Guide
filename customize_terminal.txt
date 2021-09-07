@@ -1,0 +1,20 @@
+It's all started with my terminal line being too long as it showed my username +hostname (my name + type of my Macbook) + working directory. So, I decided to customize it. 
+
+I googled several ways to do that, but they didn't work for my Mac. Then I discovered that these numerous guides on customizing your Terminal were written for the bash that is no longer available for Macs running on iOS Catalina and newer. New shell is called Z Shell, or shortly zsh. There are fewer tutorials on how to set it, so I wrote one.
+
+1. Create .zshrc file where you will store all directions for your Terminal appearance in your home (~) directory:
+cd ~ #go to home directory
+touch .zshrc
+
+2. Open it in vim/nano/other text editor
+vim ~/.zshrc
+
+3. Now you can customize your prompt. So, default one would be:
+PROMPT='%n@%m %. %% '
+
+#edit later
+You can change it by:
+color-> lifehack with bolding
+bold
+
+#add additional notes on styling without much coding
