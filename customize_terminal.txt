@@ -8,13 +8,38 @@ touch .zshrc
 
 2. Open it in vim/nano/other text editor
 vim ~/.zshrc
+then press 'i' to start INSERT mode
 
 3. Now you can customize your prompt. So, default one would be:
 PROMPT='%n@%m %. %% '
+%n stands for user
+%m machine
+%. current working directory
+%% symbol of % 
 
-#edit later
-You can change it by:
-color-> lifehack with bolding
-bold
+If you want to play with color:
+add %F{color}%f where instead of 'color' you should type either name (black, white, green) or code(0-255). 
+More on color coding here: https://jonasjacek.github.io/colors/
+You can also make it bold by using %Btext%b
 
-#add additional notes on styling without much coding
+For example, 
+PROMPT='%n %B%F{56}%.%f%b %F{white}:>%f '
+
+If you want to add git info:
+paste the following code:
+
+# version control info
+autoload -Uz vcs_info
+precmd() { vcs_info }
+# editing vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats 'branch %b'
+# setting prompt
+setopt PROMPT_SUBST
+PROMPT='%n %F{11}${vcs_info_msg_0_}%f :> ' #just an example feel free to customize as you want
+
+4. Push 'Esc' button. Type ':x' to save and quit
+
+5. Run
+source ~/.zshrc
+
+#TODO: add additional notes on styling without much coding
