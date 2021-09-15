@@ -1,4 +1,10 @@
-It's all started with my terminal line being too long as it showed my username +hostname (my name + type of my Macbook) + working directory. So, I decided to customize it. 
+SETTING THE LOOK OF THE TERMINAL ITSELF:
+Terminal > Preferences > Profiles 
+There you can either create your own theme or just choose a prepared one.
+In your own customized theme you are free to choose the color of the text, set how colors might differ depending on the function (allow ANSI colors for that). You can also choose the type of cursor, font, etc.
+
+SETTING YOUR PROMPT LINE:
+It's all started with my prompt line being too long as it showed my username +hostname (my name + type of my Macbook) + working directory. So, I decided to customize it. 
 
 I googled several ways to do that, but they didn't work for my Mac. Then I discovered that these numerous guides on customizing your Terminal were written for the bash that is no longer available for Macs running on iOS Catalina and newer. New shell is called Z Shell, or shortly zsh. There are fewer tutorials on how to set it, so I wrote one.
 
@@ -41,5 +47,3 @@ PROMPT='%n %F{11}${vcs_info_msg_0_}%f :> ' #just an example feel free to customi
 
 5. Run
 source ~/.zshrc
-
-#TODO: add additional notes on styling without much coding
